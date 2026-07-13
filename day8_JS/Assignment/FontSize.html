@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Font Size</title>
+<script>
+function sizeInc(){
+	let x = document.getElementById("haha");
+	let s =parseInt(window.getComputedStyle(x).fontSize);
+	x.style.fontSize = (s+5)+"px";
+}
+</script>
+</head>
+<body>
+<p id = "haha">LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL</p>
+<button onclick="sizeInc()">SIZEINC</button>
+</body>
+</html>

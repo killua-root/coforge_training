@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+<script>
+function calculate(operator){
+	var n1 = parseInt(document.getElementById("n1").value);
+	var n2 = parseInt(document.getElementById("n2").value);
+	var res = "";
+	if(operator == "add"){
+		res ="Addition : " + (n1 + n2);
+	}
+	if(operator == "sub"){
+		res ="Subtraction : " + (n1 - n2);
+	}
+	if(operator == "mul"){
+		res = "Multiplication : " + (n1 * n2);
+	}
+	if(operator == "div"){
+		res ="Division : " + (n1 / n2);
+	}
+	document.getElementById("result").innerHTML=res;
+}
+</script>
+</head>
+<body>
+Enter no1<input type ="number" id ="n1"/>
+Enter no2<input type ="number" id ="n2"/>
+<br>
+<button onclick="calculate('add')">Addition</button>
+<button onclick="calculate('sub')">Subtraction</button>
+<button onclick="calculate('mul')">Multiplication</button>
+<button onclick="calculate('div')">Division</button>
+<p id = "result"></p>
+
+
+</body>
+</html>

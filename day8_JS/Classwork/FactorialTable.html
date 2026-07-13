@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Factorial Table</title>
+<script type="text/javascript">
+function factorial(n){
+	var n = parseInt(document.getElementById("n").value);
+	var x =1;
+	var res="";
+	res = "<table border = '1' width = '40%'>";
+	res += "<tr><th>Number</th><th>Factorial</th></tr>";
+	
+	for(var i =1; i<=n;i++ ){
+		x=x*i
+		res += "<tr><td>" + i +"</td><td>" + x + "</td></tr>";
+		
+	}
+	document.getElementById("result").innerHTML=res;
+
+}
+</script>
+</head>
+<body>
+Enter number<input type ="number" id = "n"/>
+<button onclick="factorial(n)">Factorial</button>
+<p id="result"></p>
+</body>
+</html>
+<!-- var variables can be accessed anywhere whereas let variables 
+are local variables  which are block scoped -->

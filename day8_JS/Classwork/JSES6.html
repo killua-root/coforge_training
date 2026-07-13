@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>default parameters</title>
+<script type="text/javascript">
+function add(a =20, b=40){
+	console.log(a+b);
+}
+add();
+add(100);
+add(100,200);
+</script>
+<script>
+function adds(a, b, ...args) {
+    console.log("a+b = " + (a + b));
+
+    let total = 0;
+    for (let n of args) {
+        total += n;
+    }
+
+    console.log("Rest arguments total = " + total);
+}
+
+adds(100, 200, 10, 30, 20);
+
+const odd = [1,3,5];
+const combined = [2,4,6, ...odd];
+console.log("spread = " + combined);
+// object destructuring
+let ar =[10,20,30,40,50];
+let [x,y,z]=ar;
+console.log(x);
+console.log(y);
+console.log(z);
+let [a,b,c, ...args]=ar;
+console.log(args);
+//Before ES6
+let person = {
+		firstName:'A',
+		secondName: "B"
+}
+let fname = person.firstName;
+let sname = person.secondName;
+//After ES6
+let persons = {
+		firstNames:'A',
+		secondNames: "B"
+}
+let {firstNames:fnames,secondNames:lnames} = persons;
+console.log(fnames);
+console.log(lnames);
+</script>
+<script>
+const add = (a, b) => a+b;
+const welcome = (name) => "Welcome" + name;
+function myFunction(){
+	console.log(add(10,20));
+	console.log(welcome("valan"));
+}
+</script>
+</head>
+<body>
+</body>
+</html>
