@@ -1,0 +1,26 @@
+{
+  "employees": [
+    {
+      "eid": 101,
+      "ename": "John",
+      "email": "john@abc.com",
+      "mobile": 1039417,
+      "id": "3vsRNQQlMTI"
+    },
+    {
+      "eid": 102,
+      "ename": "Jane",
+      "email": "jane@abc.com",
+      "mobile": 1047654,
+      "id": "2GrMKwRyISU"
+    },
+    {
+      "eid": 104,
+      "ename": "Monk",
+      "email": "monk@abc.com",
+      "mobile": 1029687,
+      "id": "9RJ75aKmZEY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
