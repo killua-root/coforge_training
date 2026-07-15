@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="student" class="com.coforge.model.Student">
+<property name="sId" value="250"></property>
+<property name="sName" value="Ajay"></property>
+<property name="address" ref="address"></property>
+<property name="subjects">
+<list>
+<value>DAA</value>
+<value>Java</value>
+<value>WebDevelopment</value>
+<value>URDU</value>
+</list>
+</property>
+<property name="skills">
+<set>
+<value>React.js</value>
+<value>Angular.js</value>
+<value>Node.js</value>
+<value>Springboot</value>
+</set>
+</property>
+<property name="marks">
+<map>
+<entry key="DAA" value="94"></entry>
+<entry key="Java" value="91"></entry>
+<entry key="WebDevelopment" value="89"></entry>
+<entry key="URDU" value="56"></entry>
+</map>
+</property>
+</bean>
+<bean id="address" class="com.coforge.model.Address">
+<property name="city" value="Los Santos"></property>
+<property name="state" value="San Andreas"></property>
+</bean>
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="employee1" class="com.coforge.model.Employee">
+    <property name="eid" value="101"/>
+    <property name="ename" value="Valan"/>
+    <property name="esalary" value="2000"/>
+    <property name="dno" value="10"/>
+    <property name="address" ref="address1"/>
+    <property name="project" ref="project1"/>
+</bean>
+
+<bean id="employee2" class="com.coforge.model.Employee">
+    <constructor-arg name="eid" value="102"/>
+    <constructor-arg name="ename" value="Raj"/>
+    <constructor-arg name="esalary" value="3000"/>
+    <constructor-arg name="dno" value="20"/>
+    <constructor-arg name="address" ref="address2"/>
+    <constructor-arg name="project" ref="project2"/>
+</bean>
+
+<bean id="address1" class="com.coforge.model.Address">
+    <property name="city" value="city-1"/>
+    <property name="state" value="state-1"/>
+</bean>
+
+<bean id="address2" class="com.coforge.model.Address">
+    <constructor-arg name="city" value="city-2"/>
+    <constructor-arg name="state" value="state-2"/>
+</bean>
+<bean id="project1" class="com.coforge.model.Project">
+    <property name="pId" value="303"/>
+    <property name="pName" value="project-1"/>
+</bean>
+<bean id="project2" class="com.coforge.model.Project">
+    <constructor-arg name="pId" value="334"/>
+    <constructor-arg name="pName" value="project-2"/>
+</bean>
+</beans>
